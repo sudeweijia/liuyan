@@ -6,7 +6,7 @@ const app = express();
 
 // ==================== 需要你亲自修改的部分 ====================
 // 1. MongoDB Atlas 连接字符串
-const mongoUri = process.env.MONGO_URI || 'mongodb+srv://1494130690:H8rDkjr2IOw8h@sudeweijia.gluja.mongodb.net/?retryWrites=true&w=majority&app'; // 替换为你的 MongoDB Atlas 连接字符串
+const mongoUri = process.env.MONGO_URI || 'mongodb+srv://1494130690:H8rDkjr2IOw8h@sudeweijia.gluja.mongodb.net/?retryWrites=true&w=majority'; // 替换为你的 MongoDB Atlas 连接字符串
 // 2. 数据库名称
 const dbName = 'sudeweijia'; // 如果需要修改数据库名称，请替换
 // 3. 集合名称
