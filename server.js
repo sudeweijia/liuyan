@@ -23,7 +23,7 @@ app.get('/api/messages', async (req, res) => {
     try {
         client = new MongoClient(mongoUri);
         await client.connect();
-        const db = client.db(sudeweijia);
+        const db = client.db('sudeweijia');
         const collection = db.collection(collectionName);
         const messages = await collection.find().toArray();
         res.json(messages);
@@ -46,7 +46,7 @@ app.post('/api/messages', async (req, res) => {
     try {
         client = new MongoClient(mongoUri);
         await client.connect();
-        const db = client.db(sudeweijia);
+        const db = client.db('sudeweijia');
         const collection = db.collection(collectionName);
         const result = await collection.insertOne({ message, timestamp: new Date() });
         res.status(201).json(result.ops[0]);
